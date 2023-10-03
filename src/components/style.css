@@ -1,0 +1,74 @@
+.calendar_header_text {
+  font-size: 3.5rem;
+  margin: 0px;
+  display: inline;
+}
+.calendar_strip_main_container {
+  margin: 2rem 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.calendar_strip_previous_next_button {
+  height: 5rem;
+  min-width: 5rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 2rem;
+}
+.calendar_strip_previous_next_button:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.calendar_strip_container {
+  display: flex;
+  overflow: auto;
+  gap: 1.5rem;
+  margin: 0 20px;
+  transition: all 0.5s;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.calendar_strip_container::-webkit-scrollbar {
+  display: none;
+}
+
+.calendar_strip_card {
+  min-width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+.calendar_strip_card:hover {
+  background-color: #f0e3ff;
+}
+.selected_date {
+  background-color: #d8b4fe;
+}
+.selected_date:hover {
+  background-color: #d8b4fe;
+}
+.isDisabled_date {
+  background-color: #bbbbbb;
+  color: white;
+}
+.isDisabled_date:hover {
+  background-color: #c6c6c6;
+}
+.day_name_text {
+  font-size: 2rem;
+}
+.day_number_text {
+  font-size: 2.5rem;
+  font-weight: 500;
+}

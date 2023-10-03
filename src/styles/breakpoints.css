@@ -1,0 +1,53 @@
+/*
+<------- !!!Warning!!! -------> 
+Never change below percentage values. Changing any value will reflect to entire website. Responsiveness depends on this percentage values. So never try to change them 
+<------- !!!Warning!!! ------->
+ */
+
+/* Mobile Mode 
+(From 0px to 428px) */
+@media only screen and (max-width: 428px) {
+  html {
+    font-size: 35%;
+  }
+}
+
+/* Tablet Mode 
+(From 429px to 768px) */
+@media only screen and (min-width: 429px) {
+  html {
+    font-size: 35%;
+  }
+}
+
+/* Laptop Mode 
+(From 769px to 1280px) */
+@media only screen and (min-width: 769px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+/* Desktop Mode 
+(From 1281px to 1920px) */
+@media only screen and (min-width: 1281px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+/* Large Desktop Mode 
+(From 1921px to 5000ppx) */
+@media only screen and (min-width: 1921px) {
+  html {
+    font-size: 125%;
+  }
+}
+
+/* Extra Large Desktop Mode 
+(From 5000px to infinite) */
+@media only screen and (min-width: 5000px) {
+  html {
+    font-size: 225%;
+  }
+}
