@@ -53,7 +53,7 @@ const Example = () => {
 
 ## Props
 
-| Prop                 | Description                    | Type     | Default    |
+| Prop                 | Description                                                                                                                                                        | Type     | Default    |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- | ---------- |
 | **`selectedDate`**  | Holds the currently chosen date .                                        | |  Today's Date  | 
 | **`onDateChange`**     | Callback function triggered when a user selects a new date .                                                                                                                                 | Function | |
@@ -74,4 +74,3 @@ const Example = () => {
 ## License
 
 Licensed under the MIT License.
-```
