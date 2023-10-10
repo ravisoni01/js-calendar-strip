@@ -31,6 +31,7 @@ The `js-calendar-strip` package is a versatile calendar strip component designed
 <details>
 
 ```jsx
+import React, { useState } from 'react';
 import JsCalendarStrip from 'js-calendar-strip';
 
 const Example = () => {
