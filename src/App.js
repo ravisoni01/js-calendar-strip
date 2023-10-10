@@ -18,14 +18,14 @@ const App = () => {
         <JsCalendarStrip
           // style={{ backgroundColor: 'red' }}
           // headerStyle={{ backgroundColor: 'red' }}
-          // dateStyle={{ backgroundColor: 'red' }}
+          // dateNumberStyle={{ backgroundColor: 'red' }}
           // dayNameStyle={{ backgroundColor: 'red' }}
           // selectedDayNameStyle={{ backgroundColor: 'red' }}
           // selectedDateNumberStyle={{ backgroundColor: 'red' }}
           // selectedDateStyle={{ backgroundColor: 'red' }}
           // buttonStyle={{ backgroundColor: 'red' }}
           // hoverStyle={{ backgroundColor: 'red' }}
-          // disableStyle={{ backgroundColor: 'red' }}
+          disableStyle={{ backgroundColor: 'red' }}
           // disableDates={disableDateslist}
           // startDate={new Date()}
           // endDate={addDays(new Date(), 20)}

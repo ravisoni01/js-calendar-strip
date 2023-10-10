@@ -1,0 +1,17 @@
+{
+  "name": "js-calendar-strip",
+  "version": "1.0.1",
+  "description": "",
+  "main": "JsCalendarStrip.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "date-fns": "^2.30.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0"
+  }
+}

@@ -15,7 +15,7 @@ const SingleDateBox = props => {
     date,
     currentDate,
     onDateChange,
-    dateStyle,
+    dateNumberStyle,
     dayNameStyle,
     selectedDayNameStyle,
     selectedDateStyle,
@@ -73,7 +73,9 @@ const SingleDateBox = props => {
     >
       <p
         className="day_name_text"
-        style={isSelected ? { ...selectedDayNameStyle } : { ...dateStyle }}
+        style={
+          isSelected ? { ...selectedDayNameStyle } : { ...dateNumberStyle }
+        }
       >
         {days[date.getDay()]}
       </p>

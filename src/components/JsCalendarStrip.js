@@ -10,7 +10,7 @@ const JsCalendarStrip = props => {
     onDateChange,
     style,
     headerStyle,
-    dateStyle,
+    dateNumberStyle,
     dayNameStyle,
     selectedDayNameStyle,
     selectedDateStyle,
@@ -27,7 +27,6 @@ const JsCalendarStrip = props => {
     handlePrevious,
     handleNext,
     visibleDates,
-    scrollRef,
     firstMonthVisible,
     secondMonthVisible,
   } = calendarLogic(startDate, endDate);
@@ -51,7 +50,7 @@ const JsCalendarStrip = props => {
             return (
               <SingleDateBox
                 disableDates={disableDates}
-                dateStyle={dateStyle}
+                dateNumberStyle={dateNumberStyle}
                 dayNameStyle={dayNameStyle}
                 onDateChange={onDateChange}
                 disableStyle={disableStyle}

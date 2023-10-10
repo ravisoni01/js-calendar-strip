@@ -1,6 +1,22 @@
 import { useEffect, useRef, useState } from 'react';
 import { addDays, format, subDays } from 'date-fns';
-import useViewPort from '../utils/useViewPort';
+
+const useViewPort = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+
+  const handleWindowResize = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowResize);
+    return () => window.removeEventListener('resize', handleWindowResize);
+  }, []);
+
+  return { width, height };
+};
 
 function useHorizontalScroll(handlePrevious, handleNext, visibleDates) {
   const elRef = useRef();
@@ -65,7 +81,7 @@ const isNextDate = (currentDate, startDate) => {
 const CalendarLogic = (startDate, endDate) => {
   const { width } = useViewPort();
 
-  const generateNextOrPreviousDateCount = width > 410 ? 5 : 2;
+  const generateNextOrPreviousDateCount = width > 500 ? 5 : 2;
 
   const [visibleDates, setVisibleDates] = useState([]);
   const [firstMonthVisible, setFirstMonthVisible] = useState('');
@@ -73,9 +89,10 @@ const CalendarLogic = (startDate, endDate) => {
 
   const generateDates = start => {
     let dates = [];
-    let i = startDate ? 0 : -5;
-    let lastRenderValue = startDate ? 15 : 10;
-    for (i; i <= lastRenderValue; i++) {
+
+    let lastRenderValue = Math.floor(width / 90);
+
+    for (let i = 0; i <= lastRenderValue; i++) {
       dates.push(addDays(start, i));
     }
 
@@ -136,7 +153,6 @@ const CalendarLogic = (startDate, endDate) => {
     if (typeof window !== 'undefined') {
       const observer = new IntersectionObserver(
         entries => {
-          console.log(entries.length);
           let tempFirstMonthVisible = entries[0].target.getAttribute('value');
           let tempSecondMonthVisible =
             entries[entries.length - 1].target.getAttribute('value');

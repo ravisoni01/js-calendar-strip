@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+<h1 align="center"> js-calendar-strip </h1>
+<div align="center">
+  Crafted with passion by  <a href="https://github.com/ravisoni01">Ravi </a> 
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Install
 
-In the project directory, you can run:
+```sh
+$ npm install js-calendar-strip
+# OR
+$ yarn add js-calendar-strip
+```
 
-### `npm start`
+## Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The `js-calendar-strip` package is a versatile calendar strip component designed for seamless integration into web applications. It offers a compact, intuitive display of dates with easily accessible navigation controls. Developers can effortlessly generate and customize date ranges, making it an ideal solution for applications requiring date-based interactions.
 
-### `npm test`
+**Key Features:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   **Calendar Strip Display:** Presents a visually intuitive strip of dates for easy reference.
+-   **Next and Previous Buttons:** Allows users to navigate forward and backward to view different date ranges.
+-   **Customization Options:** Offers a range of styling and design options for tailoring the calendar strip to suit specific application aesthetics.
+-   **Date Disabling:** Provides the functionality to selectively disable specific dates, offering fine-grained control over user interactions.
 
-### `npm run build`
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/71606441/273928522-18a9e259-1496-413d-9f16-249f91d0bab3.gif" alt="">
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<details>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```jsx
+import JsCalendarStrip from 'js-calendar-strip';
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+const Example = () => {
+	const [selectedDate, setSelectedDate] = useState(new  Date());
 
-### `npm run eject`
+	const  handleSelectDate  = date =>  {
+		setSelectedDate(date);
+	};
+	
+	return (
+	  <div>
+	    <JsCalendarStrip
+	      selectedDate={selectedDate}
+	      onDateChange={handleSelectDate}
+	    />
+	  </div>
+)}
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Props
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Prop                 | Description                    | Type     | Default    |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- | ---------- |
+| **`selectedDate`**  | Holds the currently chosen date .                                        | |  Today's Date  | 
+| **`onDateChange`**     | Callback function triggered when a user selects a new date .                                                                                                                                 | Function | |
+| **`startDate`** | Sets the initial date from where the calendar needs to begin .                                                                | Date | |
+| **`endDate`**   | Final date visible in the calendar .  | Date |
+| **`disableDates`**   | Allows the inclusion of a list of dates that are not selectable within the calendar .                                      | Array |
+| **`style`** | Style for the main container of the calendar .                                                                 | |
+| **`headerStyle`**  | Style for the header text of the calendar .                                           | |
+| **`dateNumberStyle`**| Style for the date number of the calendar strip .                  | |
+| **`dayNameStyle`**| Style for the day name of the calendar strip .                               | |
+| **`selectedDayNameStyle`**| Style for the selected day name of the calendar strip .                                | |
+| **`selectedDateNumberStyle`**     | Style for the selected date number of the calendar strip .                                                               | |
+| **`selectedDateStyle`**     | Style for the selected date of the calendar strip .          | |  |
+| **`hoverStyle`**  | Hover Style for the calendar strip .                                                               | | |
+| **`disableStyle`**        | Style for the disable date of the calendar strip .                                                       | |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Licensed under the MIT License.
+```
