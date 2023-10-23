@@ -1,6 +1,6 @@
 {
   "name": "js-calendar-strip",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "JsCalendarStrip.js",
   "scripts": {
@@ -13,5 +13,22 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ravisoni01/js-calendar-strip.git"
+  },
+  "keywords": [
+    "js calendar",
+    "js-calendar",
+    "js-calendar-strip",
+    "js calendar strip",
+    "calendar",
+    "calendar strip",
+    "calendar-strip",
+    "js",
+    "react",
+    "react.js",
+    "strip"
+  ]
 }

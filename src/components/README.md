@@ -1,4 +1,6 @@
-<h1 align="center"> js-calendar-strip </h1>
+<div align="center">
+  <h1 align="center"> js-calendar-strip </h1>
+</div>
 <div align="center">
   Crafted with passion by  <a href="https://github.com/ravisoni01">Ravi </a> 
 </div>
